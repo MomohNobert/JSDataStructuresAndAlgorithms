@@ -4,15 +4,15 @@ function same(arr1, arr2) {
     if(arr1.length !== arr2.length) {
         return false;
     }
-    for(let i = 0; i < arr1.length; i++) {
-        let correctIndex = arr2.indexOf(arr1[i] ** 2)
+    for(var i = 0; i < arr1.length; i++) {
+        var correctIndex = arr2.indexOf(arr1[i] ** 2);
         if (correctIndex === -1 ) {
             return false;
         }
-        arr2.splice(correctIndex, 1)
+        arr2.splice(correctIndex, 1);
     }
-    return true
-};
+    return true;
+}
 
 console.log(same([1,2,3,4],[1,4,9,16]))
 
@@ -32,7 +32,7 @@ function sameRef(arr1, arr2) {
         frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
     }
 
-    for (let key in frequencyCounter1) {  
+    for (var key in frequencyCounter1) {  
         if(!(key ** 2 in frequencyCounter2)) {
             return false
         }
