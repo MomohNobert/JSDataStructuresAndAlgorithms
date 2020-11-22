@@ -13,4 +13,20 @@ function bubbleSort(arr) {
     return arr
 }
 
-bubbleSort([10,9,8,7]);
+function bubbleSortOptimized(arr) {
+    const swap = (array, idx1, idx2) => {
+        [array[idx1], array[idx2]] = [array[idx2], array[idx1]];
+    }
+ 
+    for(var i =  arr.length; i > 0; i--) {
+        for(var j = 0; j < i - 1; j++) {
+            console.log(arr, arr[j], arr[j+1]);
+            if (arr[j] > arr[j + 1]) {
+                // SWAP 
+                swap(arr, j, j+1)
+            }
+        }
+    }    
+}
+
+bubbleSortOptimized([10,9,8,7]);
